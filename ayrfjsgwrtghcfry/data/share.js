@@ -2171,7 +2171,14 @@ window.ALPHAMX_SHARE={
    },
    {
     "id": "ORNN_H100",
-    "name": "Ornn GPU 租金指数（H100 SXM + B200）",
+    "name": "Ornn GPU 租金指数（H100 SXM）",
+    "status": "正常",
+    "current_date": "2026-10-28",
+    "reading_missing": false
+   },
+   {
+    "id": "ORNN_B200",
+    "name": "Ornn GPU 租金指数（B200）",
     "status": "正常",
     "current_date": "2026-10-28",
     "reading_missing": false

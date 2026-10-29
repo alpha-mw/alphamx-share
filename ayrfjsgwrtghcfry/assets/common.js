@@ -471,21 +471,35 @@
 
   // 信用联动 STOP 闸（2026-10-26）：private 显示读数 / 阈值 / 日期；share 只显示灯与 STOP/允许
   function creditGateHTML(d, mode) {
-    const g = d.credit_gate; if (!g) return "";
+    const input = d.credit_gate;
+    const g = input && typeof input === "object" && !Array.isArray(input) ? {...input} : {};
+    g.name = g.name || "信用联动 STOP 闸";
+    g.monitors = Array.isArray(g.monitors) ? g.monitors : [];
+    g.baskets = Array.isArray(g.baskets) ? g.baskets : [];
+    if (!g.monitors.length) g.state = "数据未就绪";
+    const privateView = mode === "private";
     const lc = s => ({ "正常": "green", "预警": "amber", "触发": "red", "数据缺": "grey" }[s] || "amber");
     const miss = m => (m.status === "数据缺" || m.reading_status === "数据缺" || m.reading_missing);
     const light = s => `<span class="badge ${lc(s)}">● ${esc(s)}</span>`;
-    const st = g.state === "STOP" ? `<span class="badge red">STOP · 只停加、不减仓</span>` : `<span class="badge green">信用闸未触发 · 允许（快护栏 / FOMC 等其他开仓闸照旧适用）</span>`;
-    const baskets = (g.baskets || []).map(b => `<span class="gate-basket">${esc(b)}：${st}</span>`).join(" ");
+    const notReady = `<span class="badge grey" style="border:1px solid #ff5d6c">${esc(privateView ? g.private_badge || "信用闸数据未就绪" : "信用闸数据未就绪")}</span>`;
+    const requiredIds = ["HY", "CCC", "CRWV2031", "ORNN_H100", "ORNN_B200"];
+    const hasGaps = (privateView && g.not_ready?.length) ||
+      g.monitors.some(m => requiredIds.includes(m.id) && (miss(m) || (privateView && m.not_ready))) ||
+      requiredIds.some(id => !g.monitors.some(m => m.id === id));
+    const st = g.state === "STOP" ? `<span class="badge red">STOP · 只停加、不减仓</span>` : g.state === "允许" && !hasGaps ? `<span class="badge green">信用闸未触发 · 允许（快护栏 / FOMC 等其他开仓闸照旧适用）</span>` : notReady;
+    const secondary = g.state === "STOP" && hasGaps ? (privateView && g.not_ready?.length ? `<div class="mini">另有数据未就绪：${g.not_ready.map(m => esc(m.id)).join("；")}</div>` : notReady) : "";
+    const basketNames = g.baskets.length ? `<span class="gate-basket">${g.baskets.map(esc).join(" / ")}：</span>` : "";
+    const baskets = basketNames + st + secondary;
     let rows;
     if (mode === "private") {
       rows = `<table class="tbl gate-tbl"><thead><tr><th>监测项</th><th>状态</th><th>当前值（日期）</th><th>历史分位</th><th>预警</th><th>触发</th><th>备注</th></tr></thead><tbody>${
-        g.monitors.map(m => `<tr><td>${esc(m.name)}</td><td>${light(m.status)}</td><td>${miss(m) || !m.current ? '<span class="badge grey">数据缺</span>' : esc(m.current) + "（" + esc(m.current_date || "") + "）"}</td><td>${esc(m.pctile || "—")}</td><td>${esc(m.warn || "—")}</td><td>${esc(m.trigger || "—")}</td><td class="mini">${esc(m.note || "")}<br>${esc(m.source || "")}</td></tr>`).join("")}</tbody></table>
-        <div class="mini">规则（${esc(g.rule_source || "")}）：${esc(g.rule)}。放闸：${esc(g.release)}。${g.release_note ? "注：" + esc(g.release_note) + "。" : ""}${g.missing_data_rule ? "缺数：" + esc(g.missing_data_rule) + "。" : ""}读数依据：${esc(g.reading_source || "")}。状态依据：${esc(g.status_source || "")}。${esc(g.confirmed || "")}。依据：${esc(g.source || "")}</div>
-        ${(g.gaps || []).length ? `<div class="mini">待补：${g.gaps.map(esc).join("；")}</div>` : ""}`;
+        g.monitors.map(m => `<tr><td>${esc(m.name)}</td><td>${light(m.status)}</td><td>${miss(m) || m.current == null || m.current === "" ? '<span class="badge grey">数据缺</span>' : esc(m.current) + "（" + esc(m.current_date || "") + "）"}</td><td>${esc(m.pctile || "—")}</td><td>${esc(m.warn || "—")}</td><td>${esc(m.trigger || "—")}</td><td class="mini">${esc(m.note || "")}<br>${esc(m.source || "")}</td></tr>`).join("")}</tbody></table>
+        <div class="mini">规则（${esc(g.rule_source || "")}）：${esc(g.rule)}。放闸：${esc(g.release)}。${g.release_note ? "注：" + esc(g.release_note) + "。" : ""}${esc(g.private_rule || "信用闸数据未就绪")}。读数依据：${esc(g.reading_source || "")}。状态依据：${esc(g.status_source || "")}。${esc(g.confirmed || "")}。依据：${esc(g.source || "")}</div>
+        ${(g.gaps || []).length ? `<div class="mini">待补：${g.gaps.map(esc).join("；")}</div>` : ""}
+        ${g.not_ready?.length ? `<div class="mini">未就绪：${g.not_ready.map(m => esc(m.id)).join("；")}</div>` : ""}`;
     } else {
-      rows = `<div class="gate-lights">${g.monitors.map(m => `<div class="gate-light">${light(m.status)} ${esc(m.name)}${m.current_date ? ' <span class="mini">读数日 ' + esc(m.current_date) + '</span>' : ""}${miss(m) && m.status !== "数据缺" ? ' <span class="badge grey">读数：数据缺</span>' : ""}</div>`).join("")}</div>
-        <div class="mini">${esc(g.rule)}。「数据缺」只表示当日无读数，不单独触发 STOP。</div>`;
+      rows = `<div class="gate-lights">${g.monitors.map(m => `<div class="gate-light">${light(m.status)} ${esc(m.name)}${m.current_date ? ' <span class="mini">读数日 ' + esc(m.current_date) + '</span>' : ""}${miss(m) && m.status !== "数据缺" ? ' <span class="badge grey">数据未就绪</span>' : ""}</div>`).join("")}</div>
+        <div class="mini">${g.rule ? esc(g.rule) + "。" : ""}任一必需项数据缺或过旧时，信用闸显示数据未就绪。</div>`;
     }
     return `<div class="card" style="margin-top:14px"><h3>${esc(g.name)} · 状态日 ${esc(g.status_as_of || "")}</h3><div class="gate-state">${baskets}</div>${rows}</div>`;
   }
