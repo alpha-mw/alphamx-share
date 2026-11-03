@@ -2287,8 +2287,8 @@ window.ALPHAMX_SHARE={
  },
  "credit_gate": {
   "name": "信用联动 STOP 闸",
-  "state": "数据未就绪",
-  "status_as_of": "2026-11-02",
+  "state": "允许",
+  "status_as_of": "2026-11-03",
   "baskets": [
    "A股 AI 篮子",
    "美股电网篮子"
@@ -2299,36 +2299,36 @@ window.ALPHAMX_SHARE={
     "id": "HY",
     "name": "美国 HY OAS（ICE BofA 高收益债利差，FRED BAMLH0A0HYM2）",
     "status": "正常",
-    "current_date": "2026-10-29",
-    "reading_missing": true
+    "current_date": "2026-10-30",
+    "reading_missing": false
    },
    {
     "id": "CCC",
     "name": "美国 CCC OAS（ICE BofA CCC 级利差，FRED BAMLH0A3HYC）",
     "status": "正常",
-    "current_date": "2026-10-29",
-    "reading_missing": true
+    "current_date": "2026-10-30",
+    "reading_missing": false
    },
    {
     "id": "CRWV2031",
     "name": "CRWV CoreWeave 9.75% 2031 无担保债 YTM（CUSIP U2069EAC4）",
     "status": "正常",
-    "current_date": "2026-10-30",
-    "reading_missing": true
+    "current_date": "2026-11-02",
+    "reading_missing": false
    },
    {
     "id": "ORNN_H100",
     "name": "Ornn GPU 租金指数（H100 SXM）",
     "status": "正常",
-    "current_date": "2026-10-31",
-    "reading_missing": true
+    "current_date": "2026-11-01",
+    "reading_missing": false
    },
    {
     "id": "ORNN_B200",
     "name": "Ornn GPU 租金指数（B200）",
     "status": "正常",
-    "current_date": "2026-10-31",
-    "reading_missing": true
+    "current_date": "2026-11-01",
+    "reading_missing": false
    }
   ]
  }
