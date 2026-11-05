@@ -107,7 +107,7 @@
     return `${rows}
       <div class="legend" style="margin-top:8px"><span><i style="background:#8b97ad"></i>实心细条 = 当前（尚无成交时为 0%）</span><span><i style="background:#8b97ad;opacity:.35"></i>半透明 = 目标</span>
       <span><i style="background:var(--amber)"></i>不再加仓线</span><span><i style="background:var(--red)"></i>硬顶</span></div>
-      <div class="note">主题外（现金等）：当前 <b class="num">${pct(d.outside_buckets_current_pct)}</b> · 目标 <b class="num">${pct(d.outside_buckets_target_pct)}</b>。同主题中美只计一主题；超限在敞口所在市场削减，<b>不假设跨境移资</b>。主题 ≠ 分户市场。</div>`;
+      <div class="note">主题外（现金等）：当前 <b class="num">${pct(d.outside_buckets_current_pct)}</b> · 目标 <b class="num">${pct(d.outside_buckets_target_pct)}</b></div>`;
   }
 
   function bucketChart(canvas, d) {
@@ -151,7 +151,8 @@
       const u = l.unit === "%" ? "%" : "";
       const f = v => (v == null ? "—" : l.unit === "%" ? (+v).toFixed(2) + "%" : v);
       const dirTxt = l.dir === "max" ? "≤" : "≥";
-      return `<tr><td class="l">${esc(l.name)}${l.note ? `<div class="mini" style="margin:0">${esc(l.note)}</div>` : ""}</td>
+      const note = shortNoteBadge(l.note);
+      return `<tr><td class="l">${esc(l.name)}${note ? `<div class="mini" style="margin:0">${esc(note)}</div>` : ""}</td>
         <td class="num">${f(l.current)}</td><td class="num">${f(l.target)}</td>
         <td class="num">${dirTxt} ${l.hard}${u}</td><td class="num">${l.no_add == null ? "—" : l.no_add + u}</td>
         <td class="num">${l.unit === "%" ? spct(l.dist_target, 2) : l.dist_target}</td><td>${stBadge(l.status)}</td></tr>`;
