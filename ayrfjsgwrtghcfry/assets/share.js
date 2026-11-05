@@ -4,6 +4,7 @@
   if (!d) { document.body.innerHTML = '<p style="padding:20px">缺少 data/share.js</p>'; return; }
   d.buckets.forEach(b => (A.BUCKET_COLORS[b.id] = b.color));
   const { esc, pct, modeBadge } = A, u = d.unified;
+  const fxConstraint = d.fx_constraint ? (A.firstSentence || (() => ""))(d.fx_constraint) : "";
 
   const hero = `<section class="sec-nav">${A.secH("01", "净值概览", d.mode, "仅指数与百分比 · 不含金额", "nav")}
     ${A.navStripShare(d)}
@@ -15,7 +16,7 @@
     </div>
     <div class="split" style="margin-top:14px">${d.books.map(b => `<span style="width:${b.share_of_unified_pct}%;background:${b.market === "A股" ? "#f5a524" : "#3ea6ff"}"></span>`).join("")}</div>
     <div class="legend">${d.books.map(b => `<span><i style="background:${b.market === "A股" ? "#f5a524" : "#3ea6ff"}"></i>${esc(b.label)}${b.subtitle ? " · " + esc(b.subtitle) : ""} ${pct(b.share_of_unified_pct)}</span>`).join("")}<span>两户现金分户管理，不跨境调拨</span></div>
-    ${d.fx_constraint ? `<div class="note" style="margin-top:10px">🔒 ${esc(d.fx_constraint)}</div>` : ""}
+    ${fxConstraint ? `<div class="note" style="margin-top:10px">🔒 ${esc(fxConstraint)}</div>` : ""}
   </section>`;
 
   // 全部仓位（仅百分比：权重 + 盈亏%；无数量 / 金额 / 成本）

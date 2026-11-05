@@ -14,6 +14,31 @@
   const themeShort = id => "主题 " + id;
   const isPlaceholder = d => (d.performance && d.performance.kind === "placeholder_flat_cash");
 
+  function firstSentence(s) {
+    if (typeof s !== "string") return "";
+    s = s.trim();
+    const end = s.indexOf("。");
+    return end < 0 ? s : s.slice(0, end + 1);
+  }
+
+  function shortFxLine(fx) {
+    if (fx === null || typeof fx !== "object") return "";
+    const pair = fx.pair, rate = fx.rate, source = String(fx.source || "");
+    const hasPR = pair != null && pair !== "" && rate != null && rate !== "";
+    if (!hasPR) return "";
+    const previous = source.match(/前值[（(](\d{4}-\d{2}-\d{2})[）)]/);
+    if (previous) return `汇率 ${pair} ${rate} · 人民币中间价 前值（${previous[1]}）`;
+    const current = source.match(/(\d{4}-\d{2}-\d{2})[（(]当日口径/);
+    if (current) return `汇率 ${pair} ${rate} · 人民币中间价 ${current[1]}（当日口径）`;
+    return `汇率 ${pair} ${rate}`;
+  }
+
+  function shortNoteBadge(note) {
+    if (note == null) return "";
+    const s = String(note).trim();
+    return !s || s.length > 40 || s.includes("。") ? "" : s;
+  }
+
   function banners(d, view) {
     const m = d.mode_label, live = d.mode === "live", mixed = d.mode === "mixed";
     const aBook = d.books.find(b => b.market === "A股");
@@ -33,7 +58,6 @@
   }
 
   function header(d, subtitle) {
-    const note = d.meta.status_note ? `<div class="status-note">${esc(d.meta.status_note)}</div>` : "";
     const title = d.meta.title || "AlphaMx 科技创新组合";
     const en = d.meta.title_en || "AlphaMx Science & Technology Innovation Portfolio";
     const viewBit = subtitle ? `<small class="view-sub">${esc(subtitle)}</small>` : "";
@@ -41,7 +65,7 @@
       <div><div class="brand">ALPHAMX</div>
         <h1>${esc(title)}${viewBit}</h1>
         <div class="title-en">${esc(en)}</div>
-        ${note}</div>
+      </div>
       <div class="asof">估值日 <b class="num">${esc(d.meta.as_of)}</b> · Asia/Shanghai<br>${modeBadge(d.mode)}${(() => {
         const hasPos = (d.books || []).some(b => (b.positions && b.positions.length) || (b.current && b.current.length));
         return hasPos ? " 分户持仓已按台账盯市" : " 当前 100% 现金 → 目标权重为建仓意向";
@@ -144,10 +168,9 @@
 
   function perfBanner(d) {
     const p = d.performance || {};
-    if (!p.label && !isPlaceholder(d)) return "";
-    const lab = p.label || "正式账户 · 尚无成交写入";
-    const meth = p.methodology || "两户均为正式持仓口径，尚无成交写入；净值按 100% 现金盯市。本段为占位曲线，非历史实绩。";
-    return `<div class="perf-banner"><span class="perf-label">${esc(lab)}</span><span class="perf-meth">${esc(meth)}</span></div>`;
+    const lab = isPlaceholder(d) ? "正式账户 · 尚无成交写入" : p.label;
+    if (!lab) return "";
+    return `<div class="perf-banner"><span class="perf-label">${esc(lab)}</span></div>`;
   }
 
   function returnsKPIs(d) {
@@ -213,8 +236,12 @@
   function round3(x) { return Math.round(x * 1000) / 1000; }
 
   function weightsTablePct(b) {
-    const rows = b.targets.map(t => `<tr><td><span class="dot" style="background:${BUCKET_COLORS[t.bucket] || "#888"}"></span>${esc(t.name)}<span class="code">${esc(t.code)}</span>${t.note ? ` <span class="badge grey">${esc(t.note)}</span>` : ""}</td>
-      <td>${themeShort(t.bucket)}</td><td class="num">${pct(((b.current || []).find(c => c.code === t.code) || { w_book: 0 }).w_book, 1)}</td><td class="num">${pct(t.weight_pct, 1)}</td><td class="num">${pct(t.w_unified, 2)}</td></tr>`).join("");
+    const rows = b.targets.map(t => {
+      const note = shortNoteBadge(t.note);
+      const badge = note ? ` <span class="badge grey">${esc(note)}</span>` : "";
+      return `<tr><td><span class="dot" style="background:${BUCKET_COLORS[t.bucket] || "#888"}"></span>${esc(t.name)}<span class="code">${esc(t.code)}</span>${badge}</td>
+      <td>${themeShort(t.bucket)}</td><td class="num">${pct(((b.current || []).find(c => c.code === t.code) || { w_book: 0 }).w_book, 1)}</td><td class="num">${pct(t.weight_pct, 1)}</td><td class="num">${pct(t.w_unified, 2)}</td></tr>`;
+    }).join("");
     return `<div class="tbl-wrap"><table><thead><tr><th>标的</th><th>主题</th><th>当前</th><th>目标<br>占本市场</th><th>目标<br>占统一</th></tr></thead><tbody>${rows}
       <tr class="cash"><td>现金${b.cash_equivalents_pct > 0 ? `（含现金等价 ${pct(b.cash_equivalents_pct, 1)}）` : ""}</td><td>—</td><td class="num">${pct(b.cash_pct, 1)}</td><td class="num">${pct(b.target_cash_pct, 1)}</td><td class="num">${pct(b.target_cash_pct * b.share_of_unified_pct / 100, 2)}</td></tr>
       <tr class="total"><td>权益合计</td><td></td><td class="num">${pct(b.equity_pct, 1)}</td><td class="num">${pct(b.target_equity_pct, 1)}</td><td class="num">${pct(b.target_equity_pct * b.share_of_unified_pct / 100, 2)}</td></tr></tbody></table></div>`;
@@ -335,16 +362,6 @@
     </tr></thead><tbody>${rows}</tbody></table></div>`;
   }
 
-  function benchNotes(b) {
-    const notes = (b.notes || []).map(n => `<li>${esc(n)}</li>`).join("");
-    const rf = b.risk_free || {};
-    const w = (b.blend && b.blend.weights) || {};
-    const blendLine = b.blend
-      ? `<li>混合基准权重：A股本金 ${fmtNum(w.A, 1)}%（${esc(w.A_bench || "CSI300")}）+ 美股本金 ${fmtNum(w.US, 1)}%（${esc(w.US_bench || "SPX")}）</li>`
-      : "";
-    return `<ul class="bench-notes">${notes}${blendLine}<li>${esc(rf.label_zh || "无风险利率假设 = 0")}</li></ul>`;
-  }
-
   function benchSectionHTML(d, view) {
     const b = d.benchmarks;
     if (!b || !b.available) {
@@ -353,7 +370,6 @@
       </section>`;
     }
     const blendLab = b.blend ? b.blend.label_zh : "混合基准";
-    const srcBits = (b.benchmarks || []).map(x => `${esc(x.label_zh)}（${esc(x.code || x.id)}）`).join(" · ");
     return `<section class="sec-bench">${secH("05", "基准对比 / 量化指标", d.mode, "净值指数起点=100 · 相对收益与风险指标", "bench")}
       ${perfBanner(d)}
       <div class="grid g2">
@@ -385,10 +401,6 @@
           ${metricsCard((b.metrics || {}).book_A, "A股市场", b.min_points_for_annualization)}
           ${metricsCard((b.metrics || {}).book_US, "美股市场", b.min_points_for_annualization)}
         </div>
-      </div>
-      <div class="card" style="margin-top:14px"><h3>口径说明</h3>
-        ${benchNotes(b)}
-        <div class="mini">基准序列：${srcBits}。公式见构建产物 <code>benchmarks.formulas</code>（年化 / 夏普 / 跟踪误差等）。${view === "share" ? "分享版仅指数与百分比。" : "私有版同为指数对比，不含基准点位金额化展示。"}</div>
       </div>
     </section>`;
   }
@@ -503,5 +515,5 @@
     }
     return `<div class="card" style="margin-top:14px"><h3>${esc(g.name)} · 状态日 ${esc(g.status_as_of || "")}</h3><div class="gate-state">${baskets}</div>${rows}</div>`;
   }
-  window.AMX = { $, esc, pct, spct, modeBadge, stBadge, banners, header, secH, bucketsHTML, bucketChart, allocChart, limitsHTML, ladderHTML, creditGateHTML, returnsKPIs, returnsChart, cumRetChart, perfBanner, weightsTablePct, sparklineSVG, fmtIndex, navStripShare, benchSectionHTML, mountBenchCharts, metricsCard, relativeTable, BENCH_COLORS, BUCKET_COLORS, themeShort, isPlaceholder };
+  window.AMX = { $, esc, pct, spct, modeBadge, stBadge, banners, header, secH, bucketsHTML, bucketChart, allocChart, limitsHTML, ladderHTML, creditGateHTML, returnsKPIs, returnsChart, cumRetChart, perfBanner, weightsTablePct, sparklineSVG, fmtIndex, navStripShare, benchSectionHTML, mountBenchCharts, metricsCard, relativeTable, BENCH_COLORS, BUCKET_COLORS, themeShort, isPlaceholder, firstSentence, shortFxLine, shortNoteBadge };
 })();
