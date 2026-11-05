@@ -36,7 +36,7 @@
   function shortNoteBadge(note) {
     if (note == null) return "";
     const s = String(note).trim();
-    return !s || s.length > 40 || s.includes("。") ? "" : s;
+    return !s || s.length > 24 || s.includes("v1.") || s.includes("。") ? "" : s;
   }
 
   function banners(d, view) {
