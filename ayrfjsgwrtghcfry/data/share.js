@@ -11,18 +11,18 @@ window.ALPHAMX_SHARE={
  "performance": {
   "kind": "mtm_close",
   "label": "两户正式持仓 · A股按 11/9 收盘 · 美股按 11/9 美东收盘价计",
-  "methodology": "两户均为正式持仓口径。A股市场持仓以 PM 台账为准，按 11/9 收盘价计（300502 新易盛 余仓 11/3 清仓已入账；GC001 10/28–10/30、11/2–11/3 未回报、按未做暂记，现金留活期；费用按台账单列）。美股市场持仓以 PM 台账（11/9 美东收盘定账；10/27–11/3 零交易；SGOV 现金等价按市价法、分红按扣 10% 税后入账）为准，个股与配置仓 ETF 按 11/9 美东收盘价计，SGOV 现金等价账面值随台账（按 11/9 美东收盘定账）。GEV GE Vernova 未建；未成交挂单不计。汇率：人民币中间价 前值（2026-11-09）；历史点保留当日所用汇率。⚑ 10/6 汇率口径切换属计量口径变化、非投资收益；回撤高点按 10/6 起序列计。现金口径（v1.2）：每户现金 = 活期 + 现金等价，净值只计一次。"
+  "methodology": "两户均为正式持仓口径。A股市场持仓以 PM 台账为准，按 11/9 收盘价计（300502 新易盛 余仓 11/3 清仓已入账；GC001 10/28–10/30、11/2–11/3 未回报、按未做暂记，现金留活期；费用按台账单列）。美股市场持仓以 PM 台账（11/9 美东收盘定账 + LMT 减半成交入账；SGOV 现金等价按市价法、分红按扣 10% 税后入账）为准，个股与配置仓 ETF 按 11/9 美东收盘价计，SGOV 现金等价账面值随台账（按 11/9 美东收盘定账）。GEV GE Vernova 未建；未成交挂单不计。汇率：人民币中间价 前值（2026-11-09）；历史点保留当日所用汇率。⚑ 10/6 汇率口径切换属计量口径变化、非投资收益；回撤高点按 10/6 起序列计。现金口径（v1.2）：每户现金 = 活期 + 现金等价，净值只计一次。"
  },
  "fx_constraint": "外汇约束：A股市场资金无法快速划转至美股市场；两户现金各自独立、不可互相抵充。大账仅作合并计量与主题穿透，不假设跨境移资。",
  "unified": {
-  "equity_pct": 45.29,
-  "cash_pct": 54.71,
+  "equity_pct": 43.5,
+  "cash_pct": 56.5,
   "target_equity_pct": 81.12,
   "target_cash_pct": 18.88,
   "dd_pct": -4.1,
   "nav_index": 96.127,
-  "day_change_pct": 0.479,
-  "vs_capital_pct": -3.931
+  "day_change_pct": 0.48,
+  "vs_capital_pct": -3.93
  },
  "books": [
   {
@@ -233,13 +233,13 @@ window.ALPHAMX_SHARE={
    "market": "美股",
    "mode": "live",
    "share_of_unified_pct": 47.3,
-   "cash_pct": 66.34,
-   "equity_pct": 33.66,
+   "cash_pct": 70.12,
+   "equity_pct": 29.88,
    "cash_floor_pct": 2,
    "target_equity_pct": 69,
    "target_cash_pct": 31.0,
    "cash_equivalents_pct": 31.58,
-   "vs_capital_pct": -0.452,
+   "vs_capital_pct": -0.451,
    "targets": [
     {
      "code": "ETN",
@@ -314,8 +314,8 @@ window.ALPHAMX_SHARE={
     {
      "code": "LMT",
      "name": "Lockheed Martin",
-     "w_book": 7.56,
-     "w_unified": 3.58
+     "w_book": 3.78,
+     "w_unified": 1.79
     },
     {
      "code": "NOC",
@@ -358,9 +358,9 @@ window.ALPHAMX_SHARE={
     {
      "id": "stock",
      "label": "个股",
-     "w_book": 27.02,
-     "w_unified": 12.78,
-     "upl_pct": 1.965,
+     "w_book": 23.24,
+     "w_unified": 10.99,
+     "upl_pct": -0.117,
      "rows": [
       {
        "code": "ETN",
@@ -379,8 +379,8 @@ window.ALPHAMX_SHARE={
       {
        "code": "LMT",
        "name": "Lockheed Martin",
-       "w_book": 7.56,
-       "w_unified": 3.58,
+       "w_book": 3.78,
+       "w_unified": 1.79,
        "upl_pct": 16.95
       },
       {
@@ -402,8 +402,8 @@ window.ALPHAMX_SHARE={
     {
      "id": "etf",
      "label": "配置仓 ETF",
-     "w_book": 6.65,
-     "w_unified": 3.15,
+     "w_book": 6.64,
+     "w_unified": 3.14,
      "upl_pct": -0.512,
      "rows": [
       {
@@ -456,15 +456,15 @@ window.ALPHAMX_SHARE={
     {
      "id": "demand_cash",
      "label": "活期现金",
-     "w_book": 34.76,
-     "w_unified": 16.44,
+     "w_book": 38.54,
+     "w_unified": 18.23,
      "upl_pct": null,
      "rows": []
     }
    ],
    "pnl": {
-    "unrealized_pct": 1.467,
-    "total_pct_of_cost": -1.37
+    "unrealized_pct": -0.205,
+    "total_pct_of_cost": -1.515
    }
   }
  ],
@@ -521,7 +521,7 @@ window.ALPHAMX_SHARE={
    "hard_pct": 14,
    "no_add_pct": 13.5,
    "color": "#2ed3a1",
-   "current_pct": 8.11,
+   "current_pct": 6.32,
    "target_pct": 11.83,
    "long_term_target_pct": 11.83,
    "target_note": "",
@@ -530,12 +530,12 @@ window.ALPHAMX_SHARE={
    "status": "green"
   }
  ],
- "outside_buckets_current_pct": 55.32,
+ "outside_buckets_current_pct": 57.11,
  "outside_buckets_target_pct": 28.69,
  "limits": [
   {
    "name": "统一权益（穿透）",
-   "current": 45.29,
+   "current": 43.5,
    "target": 81.12,
    "hard": 88,
    "no_add": 86,
@@ -559,7 +559,7 @@ window.ALPHAMX_SHARE={
   },
   {
    "name": "美股市场 现金 + 现金等价（分户）",
-   "current": 66.34,
+   "current": 70.12,
    "target": 31.0,
    "hard": 2,
    "no_add": null,
@@ -594,16 +594,16 @@ window.ALPHAMX_SHARE={
    "status": "red"
   },
   {
-   "name": "美股市场 单票最大（LMT Lockheed Martin）",
-   "current": 7.56,
-   "target": 7.56,
+   "name": "美股市场 单票最大（ETN Eaton）",
+   "current": 7.22,
+   "target": 7.22,
    "hard": 16,
    "no_add": 8,
    "dir": "max",
    "unit": "%",
    "note": "v1.3（Maxwell 2026-10-12 19:57 确认）：信心档按挖掘记录认定，无记录一律估值型 8%（占本户净值）；超 8% BLOCK 加仓、存量不强制减；硬顶 A 28% / 美 16% / 统一 15% 照旧",
-   "dist_target": 8.44,
-   "status": "amber"
+   "dist_target": 8.78,
+   "status": "green"
   },
   {
    "name": "A股市场 商品期货 ETF 合计（v1.2 §4.4）",
@@ -679,7 +679,7 @@ window.ALPHAMX_SHARE={
   },
   {
    "name": "主题 D · 国防 backlog",
-   "current": 8.11,
+   "current": 6.32,
    "target": 11.83,
    "hard": 14,
    "no_add": 13.5,
@@ -696,7 +696,7 @@ window.ALPHAMX_SHARE={
   "current_dd_pct": -4.1,
   "inception": "2026-10-01",
   "ladder_state": "amber",
-  "day_change_pct": 0.479,
+  "day_change_pct": 0.48,
   "nav_index": 96.127,
   "ladder": [
    {
@@ -1007,7 +1007,7 @@ window.ALPHAMX_SHARE={
     "index": 96.127,
     "dd_pct": -4.1,
     "cum_ret_pct": -3.873,
-    "day_change_pct": 0.479
+    "day_change_pct": 0.48
    }
   ]
  },
@@ -1916,7 +1916,7 @@ window.ALPHAMX_SHARE={
     "date": "2026-11-10",
     "portfolio": 96.127,
     "A_book": 93.1483,
-    "US_book": 99.5476,
+    "US_book": 99.5487,
     "CSI300": 93.0809,
     "CHINEXT": 78.4161,
     "SPX": 98.4803,
@@ -2054,7 +2054,7 @@ window.ALPHAMX_SHARE={
      97.873,
      98.5439,
      98.5439,
-     99.5476
+     99.5487
     ],
     "benchmark_id": "SPX",
     "benchmark_label": "标普500",
@@ -2097,7 +2097,7 @@ window.ALPHAMX_SHARE={
      98.4803
     ],
     "relative": {
-     "excess_total_pct": 1.067,
+     "excess_total_pct": 1.068,
      "tracking_error_ann_pct": 15.169,
      "up_capture": -0.042,
      "down_capture": 0.129,
@@ -2392,12 +2392,12 @@ window.ALPHAMX_SHARE={
     "cal_days": 40,
     "sample_insufficient": false,
     "sample_note": null,
-    "total_return_pct": -0.452,
-    "ann_return_pct": -3.212,
-    "ann_vol_pct": 10.52,
+    "total_return_pct": -0.451,
+    "ann_return_pct": -3.204,
+    "ann_vol_pct": 10.521,
     "sharpe": -0.305,
     "max_dd_pct": -4.278,
-    "calmar": -0.751,
+    "calmar": -0.749,
     "win_rate_pct": 40.0,
     "period_vol_pct": 0.663,
     "rf_annual_pct": 0.0,
