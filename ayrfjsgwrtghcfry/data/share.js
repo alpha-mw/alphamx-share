@@ -3,26 +3,26 @@ window.ALPHAMX_SHARE={
  "meta": {
   "title": "AlphaMx 科技创新组合",
   "title_en": "AlphaMx Science & Technology Innovation Portfolio",
-  "as_of": "2026-11-10",
+  "as_of": "2026-11-11",
   "disclaimer": "组合展示，非投资建议"
  },
  "mode": "live",
  "mode_label": "实盘",
  "performance": {
   "kind": "mtm_close",
-  "label": "两户正式持仓 · A股按 11/10 收盘 · 美股按 11/9 美东收盘价计",
-  "methodology": "两户均为正式持仓口径。A股市场持仓以 PM 台账为准，按 11/10 收盘价计（11/10 港股通 02513 买入按参考卖出价估算入账；300502 新易盛 余仓 11/3 清仓已入账；GC001 10/28–10/30、11/2–11/3 未回报、按未做暂记，现金留活期；费用按台账单列）。美股市场持仓以 PM 台账（11/9 美东收盘定账 + LMT 减半成交入账；SGOV 现金等价按市价法、分红按扣 10% 税后入账）为准，个股与配置仓 ETF 按 11/9 美东收盘价计，SGOV 现金等价账面值随台账（按 11/9 美东收盘定账）。GEV GE Vernova 未建；未成交挂单不计。汇率：人民币中间价 2026-11-10（当日口径）；历史点保留当日所用汇率。⚑ 10/6 汇率口径切换属计量口径变化、非投资收益；回撤高点按 10/6 起序列计。现金口径（v1.2）：每户现金 = 活期 + 现金等价，净值只计一次。"
+  "label": "两户正式持仓 · A股按 11/10 收盘 · 美股按 11/10 美东收盘价计",
+  "methodology": "两户均为正式持仓口径。A股市场持仓以 PM 台账为准，按 11/10 收盘价计（11/10 港股通 02513 买入按参考卖出价估算入账；300502 新易盛 余仓 11/3 清仓已入账；GC001 10/28–10/30、11/2–11/3 未回报、按未做暂记，现金留活期；费用按台账单列）。美股市场持仓以 PM 台账（11/10 美东收盘定账 + LMT 减半成交入账；SGOV 现金等价按市价法、分红按扣 10% 税后入账）为准，个股与配置仓 ETF 按 11/10 美东收盘价计，SGOV 现金等价账面值随台账（按 11/10 美东收盘定账）。GEV GE Vernova 未建；未成交挂单不计。汇率：人民币中间价 前值（2026-11-10）；历史点保留当日所用汇率。⚑ 10/6 汇率口径切换属计量口径变化、非投资收益；回撤高点按 10/6 起序列计。现金口径（v1.2）：每户现金 = 活期 + 现金等价，净值只计一次。"
  },
  "fx_constraint": "外汇约束：A股市场资金无法快速划转至美股市场；两户现金各自独立、不可互相抵充。大账仅作合并计量与主题穿透，不假设跨境移资。",
  "unified": {
-  "equity_pct": 46.74,
-  "cash_pct": 53.26,
-  "target_equity_pct": 81.3,
-  "target_cash_pct": 18.7,
-  "dd_pct": -2.54,
-  "nav_index": 97.685,
-  "day_change_pct": 2.108,
-  "vs_capital_pct": -2.359
+  "equity_pct": 46.79,
+  "cash_pct": 53.21,
+  "target_equity_pct": 81.29,
+  "target_cash_pct": 18.71,
+  "dd_pct": -2.51,
+  "nav_index": 97.723,
+  "day_change_pct": 0.039,
+  "vs_capital_pct": -2.321
  },
  "books": [
   {
@@ -30,7 +30,7 @@ window.ALPHAMX_SHARE={
    "subtitle": "方案 α",
    "market": "A股",
    "mode": "live",
-   "share_of_unified_pct": 53.47,
+   "share_of_unified_pct": 53.45,
    "cash_pct": 30.1,
    "equity_pct": 69.9,
    "cash_floor_pct": 2,
@@ -127,7 +127,7 @@ window.ALPHAMX_SHARE={
      "code": "002463",
      "name": "沪电股份",
      "w_book": 55.02,
-     "w_unified": 29.42
+     "w_unified": 29.41
     },
     {
      "code": "02513.HK",
@@ -141,7 +141,7 @@ window.ALPHAMX_SHARE={
      "id": "stock",
      "label": "个股",
      "w_book": 65.66,
-     "w_unified": 35.11,
+     "w_unified": 35.09,
      "upl_pct": 5.205,
      "rows": [
       {
@@ -162,7 +162,7 @@ window.ALPHAMX_SHARE={
        "code": "002463",
        "name": "沪电股份",
        "w_book": 55.02,
-       "w_unified": 29.42,
+       "w_unified": 29.41,
        "upl_pct": 10.612
       },
       {
@@ -245,21 +245,21 @@ window.ALPHAMX_SHARE={
    "subtitle": "v1.2d",
    "market": "美股",
    "mode": "live",
-   "share_of_unified_pct": 46.53,
-   "cash_pct": 70.12,
-   "equity_pct": 29.88,
+   "share_of_unified_pct": 46.55,
+   "cash_pct": 70.06,
+   "equity_pct": 29.94,
    "cash_floor_pct": 2,
    "target_equity_pct": 69,
    "target_cash_pct": 31.0,
-   "cash_equivalents_pct": 31.58,
-   "vs_capital_pct": -0.451,
+   "cash_equivalents_pct": 31.55,
+   "vs_capital_pct": -0.367,
    "targets": [
     {
      "code": "ETN",
      "name": "Eaton",
      "bucket": "B",
      "weight_pct": 12,
-     "w_unified": 5.58,
+     "w_unified": 5.59,
      "note": ""
     },
     {
@@ -267,7 +267,7 @@ window.ALPHAMX_SHARE={
      "name": "Hubbell",
      "bucket": "B",
      "weight_pct": 10,
-     "w_unified": 4.65,
+     "w_unified": 4.66,
      "note": ""
     },
     {
@@ -275,7 +275,7 @@ window.ALPHAMX_SHARE={
      "name": "Quanta Services",
      "bucket": "B",
      "weight_pct": 10,
-     "w_unified": 4.65,
+     "w_unified": 4.66,
      "note": ""
     },
     {
@@ -283,7 +283,7 @@ window.ALPHAMX_SHARE={
      "name": "GE Vernova",
      "bucket": "C",
      "weight_pct": 12,
-     "w_unified": 5.58,
+     "w_unified": 5.59,
      "note": "继续缓 · 目标 12% 保留 · 10/29 复判"
     },
     {
@@ -291,7 +291,7 @@ window.ALPHAMX_SHARE={
      "name": "Lockheed Martin",
      "bucket": "D",
      "weight_pct": 12,
-     "w_unified": 5.58,
+     "w_unified": 5.59,
      "note": ""
     },
     {
@@ -299,7 +299,7 @@ window.ALPHAMX_SHARE={
      "name": "Northrop Grumman",
      "bucket": "D",
      "weight_pct": 10,
-     "w_unified": 4.65,
+     "w_unified": 4.66,
      "note": ""
     },
     {
@@ -315,151 +315,151 @@ window.ALPHAMX_SHARE={
     {
      "code": "ETN",
      "name": "Eaton",
-     "w_book": 7.22,
-     "w_unified": 3.36
+     "w_book": 7.11,
+     "w_unified": 3.31
     },
     {
      "code": "HUBB",
      "name": "Hubbell",
-     "w_book": 2.66,
-     "w_unified": 1.24
+     "w_book": 2.64,
+     "w_unified": 1.23
     },
     {
      "code": "LMT",
      "name": "Lockheed Martin",
-     "w_book": 3.78,
-     "w_unified": 1.76
+     "w_book": 3.87,
+     "w_unified": 1.8
     },
     {
      "code": "NOC",
      "name": "Northrop Grumman",
-     "w_book": 6.5,
-     "w_unified": 3.02
+     "w_book": 6.61,
+     "w_unified": 3.08
     },
     {
      "code": "RTX",
      "name": "RTX（仅防务）",
-     "w_book": 3.08,
-     "w_unified": 1.43
+     "w_book": 3.14,
+     "w_unified": 1.46
     },
     {
      "code": "PDBC",
      "name": "Invesco 多元商品策略ETF",
-     "w_book": 0.88,
+     "w_book": 0.87,
      "w_unified": 0.41
     },
     {
      "code": "IEF",
      "name": "iShares 7–10年期美债ETF",
-     "w_book": 3.5,
-     "w_unified": 1.63
+     "w_book": 3.47,
+     "w_unified": 1.62
     },
     {
      "code": "GLD",
      "name": "SPDR 黄金ETF",
-     "w_book": 0.76,
+     "w_book": 0.74,
      "w_unified": 0.35
     },
     {
      "code": "SPYM",
      "name": "SPDR 标普500ETF（SPYM）",
-     "w_book": 1.5,
-     "w_unified": 0.7
+     "w_book": 1.49,
+     "w_unified": 0.69
     }
    ],
    "groups": [
     {
      "id": "stock",
      "label": "个股",
-     "w_book": 23.24,
-     "w_unified": 10.81,
-     "upl_pct": -0.117,
+     "w_book": 23.36,
+     "w_unified": 10.87,
+     "upl_pct": 0.52,
      "rows": [
       {
        "code": "ETN",
        "name": "Eaton",
-       "w_book": 7.22,
-       "w_unified": 3.36,
-       "upl_pct": -15.93
+       "w_book": 7.11,
+       "w_unified": 3.31,
+       "upl_pct": -17.118
       },
       {
        "code": "HUBB",
        "name": "Hubbell",
-       "w_book": 2.66,
-       "w_unified": 1.24,
-       "upl_pct": -6.506
+       "w_book": 2.64,
+       "w_unified": 1.23,
+       "upl_pct": -7.307
       },
       {
        "code": "LMT",
        "name": "Lockheed Martin",
-       "w_book": 3.78,
-       "w_unified": 1.76,
-       "upl_pct": 16.95
+       "w_book": 3.87,
+       "w_unified": 1.8,
+       "upl_pct": 19.919
       },
       {
        "code": "NOC",
        "name": "Northrop Grumman",
-       "w_book": 6.5,
-       "w_unified": 3.02,
-       "upl_pct": 13.25
+       "w_book": 6.61,
+       "w_unified": 3.08,
+       "upl_pct": 15.254
       },
       {
        "code": "RTX",
        "name": "RTX（仅防务）",
-       "w_book": 3.08,
-       "w_unified": 1.43,
-       "upl_pct": 7.602
+       "w_book": 3.14,
+       "w_unified": 1.46,
+       "upl_pct": 9.773
       }
      ]
     },
     {
      "id": "etf",
      "label": "配置仓 ETF",
-     "w_book": 6.64,
-     "w_unified": 3.09,
-     "upl_pct": -0.512,
+     "w_book": 6.58,
+     "w_unified": 3.06,
+     "upl_pct": -1.47,
      "rows": [
       {
        "code": "PDBC",
        "name": "Invesco 多元商品策略ETF",
-       "w_book": 0.88,
+       "w_book": 0.87,
        "w_unified": 0.41,
-       "upl_pct": -7.046
+       "upl_pct": -7.901
       },
       {
        "code": "IEF",
        "name": "iShares 7–10年期美债ETF",
-       "w_book": 3.5,
-       "w_unified": 1.63,
-       "upl_pct": 2.57
+       "w_book": 3.47,
+       "w_unified": 1.62,
+       "upl_pct": 1.687
       },
       {
        "code": "GLD",
        "name": "SPDR 黄金ETF",
-       "w_book": 0.76,
+       "w_book": 0.74,
        "w_unified": 0.35,
-       "upl_pct": -0.776
+       "upl_pct": -3.435
       },
       {
        "code": "SPYM",
        "name": "SPDR 标普500ETF（SPYM）",
-       "w_book": 1.5,
-       "w_unified": 0.7,
-       "upl_pct": -3.18
+       "w_book": 1.49,
+       "w_unified": 0.69,
+       "upl_pct": -3.519
       }
      ]
     },
     {
      "id": "cash_equiv",
      "label": "现金等价",
-     "w_book": 31.58,
+     "w_book": 31.55,
      "w_unified": 14.69,
      "upl_pct": 0.03,
      "rows": [
       {
        "code": "SGOV",
        "name": "iShares 0-3 Month Treasury Bond ETF",
-       "w_book": 31.58,
+       "w_book": 31.55,
        "w_unified": 14.69,
        "upl_pct": 0.03,
        "pnl_basis": "盯市"
@@ -469,15 +469,15 @@ window.ALPHAMX_SHARE={
     {
      "id": "demand_cash",
      "label": "活期现金",
-     "w_book": 38.54,
+     "w_book": 38.51,
      "w_unified": 17.93,
      "upl_pct": null,
      "rows": []
     }
    ],
    "pnl": {
-    "unrealized_pct": -0.205,
-    "total_pct_of_cost": -1.515
+    "unrealized_pct": 0.076,
+    "total_pct_of_cost": -1.234
    }
   }
  ],
@@ -489,12 +489,12 @@ window.ALPHAMX_SHARE={
    "hard_pct": 55,
    "no_add_pct": 52,
    "color": "#f5a524",
-   "current_pct": 32.98,
-   "target_pct": 49.19,
-   "long_term_target_pct": 49.19,
+   "current_pct": 32.96,
+   "target_pct": 49.17,
+   "long_term_target_pct": 49.17,
    "target_note": "",
-   "target_to_no_add": 2.81,
-   "target_to_hard": 5.81,
+   "target_to_no_add": 2.83,
+   "target_to_hard": 5.83,
    "status": "green"
   },
   {
@@ -504,10 +504,10 @@ window.ALPHAMX_SHARE={
    "hard_pct": 16,
    "no_add_pct": 15,
    "color": "#3ea6ff",
-   "current_pct": 4.6,
+   "current_pct": 4.54,
    "target_pct": 11.0,
-   "long_term_target_pct": 14.89,
-   "target_note": "目标 = 方案 3 生效上限：电网冻结约 11% 统一；原长期目标权重口径 14.89%（目标权保留，超出部分推迟、非取消）",
+   "long_term_target_pct": 14.9,
+   "target_note": "目标 = 方案 3 生效上限：电网冻结约 11% 统一；原长期目标权重口径 14.90%（目标权保留，超出部分推迟、非取消）",
    "target_to_no_add": 4.0,
    "target_to_hard": 5.0,
    "status": "green"
@@ -521,8 +521,8 @@ window.ALPHAMX_SHARE={
    "color": "#b48cff",
    "current_pct": 0.0,
    "target_pct": 0.0,
-   "long_term_target_pct": 5.58,
-   "target_note": "目标 = 方案 3 生效上限：GEV 0（1.9pp 机动额度不计，10/29 复判且须按 v1.2 重跑后才可启用）；原长期目标权重口径 5.58%（目标权保留，超出部分推迟、非取消）",
+   "long_term_target_pct": 5.59,
+   "target_note": "目标 = 方案 3 生效上限：GEV 0（1.9pp 机动额度不计，10/29 复判且须按 v1.2 重跑后才可启用）；原长期目标权重口径 5.59%（目标权保留，超出部分推迟、非取消）",
    "target_to_no_add": 5.5,
    "target_to_hard": 6.0,
    "status": "green"
@@ -534,28 +534,28 @@ window.ALPHAMX_SHARE={
    "hard_pct": 14,
    "no_add_pct": 13.5,
    "color": "#2ed3a1",
-   "current_pct": 6.21,
-   "target_pct": 11.63,
-   "long_term_target_pct": 11.63,
+   "current_pct": 6.34,
+   "target_pct": 11.64,
+   "long_term_target_pct": 11.64,
    "target_note": "",
-   "target_to_no_add": 1.87,
-   "target_to_hard": 2.37,
+   "target_to_no_add": 1.86,
+   "target_to_hard": 2.36,
    "status": "green"
   }
  ],
- "outside_buckets_current_pct": 56.21,
- "outside_buckets_target_pct": 28.18,
+ "outside_buckets_current_pct": 56.16,
+ "outside_buckets_target_pct": 28.19,
  "limits": [
   {
    "name": "统一权益（穿透）",
-   "current": 46.74,
-   "target": 81.3,
+   "current": 46.79,
+   "target": 81.29,
    "hard": 88,
    "no_add": 86,
    "dir": "max",
    "unit": "%",
    "note": "v1.2 穿透口径：个股 / 行业·宽基股票 ETF 按 1.0，现金等价按 0；≥86% 不开新名字",
-   "dist_target": 6.7,
+   "dist_target": 6.71,
    "status": "green"
   },
   {
@@ -572,7 +572,7 @@ window.ALPHAMX_SHARE={
   },
   {
    "name": "美股市场 现金 + 现金等价（分户）",
-   "current": 70.12,
+   "current": 70.06,
    "target": 31.0,
    "hard": 2,
    "no_add": null,
@@ -584,7 +584,7 @@ window.ALPHAMX_SHARE={
   },
   {
    "name": "单票最大（目标: 新易盛）",
-   "current": 29.42,
+   "current": 29.41,
    "target": 11.76,
    "hard": 15,
    "no_add": 13.5,
@@ -608,14 +608,14 @@ window.ALPHAMX_SHARE={
   },
   {
    "name": "美股市场 单票最大（ETN Eaton）",
-   "current": 7.22,
-   "target": 7.22,
+   "current": 7.11,
+   "target": 7.11,
    "hard": 16,
    "no_add": 8,
    "dir": "max",
    "unit": "%",
    "note": "v1.3（Maxwell 2026-10-12 19:57 确认）：信心档按挖掘记录认定，无记录一律估值型 8%（占本户净值）；超 8% BLOCK 加仓、存量不强制减；硬顶 A 28% / 美 16% / 统一 15% 照旧",
-   "dist_target": 8.78,
+   "dist_target": 8.89,
    "status": "green"
   },
   {
@@ -633,48 +633,48 @@ window.ALPHAMX_SHARE={
   {
    "name": "其中 新易盛 + 中际旭创（主题 A 子限额）",
    "current": 0.0,
-   "target": 21.39,
+   "target": 21.38,
    "hard": 27,
    "no_add": 24.5,
    "dir": "max",
    "unit": "%",
    "note": "主题 A 子限额",
-   "dist_target": 5.61,
+   "dist_target": 5.62,
    "status": "green"
   },
   {
    "name": "AI 基建合并（主题 A + B + C · v1.1 §4.1）· 目标 = 方案 3 满仓 ≈ 38.1%",
-   "current": 8.15,
+   "current": 8.09,
    "target": 38.1,
    "hard": 45,
    "no_add": 40,
    "dir": "max",
    "unit": "%",
-   "note": "方案 3 生效上限：A 户 α ≤27.1% 统一 · 电网冻结约 11% · GEV 0（1.9pp 预留至 10/29 复判）；v1.2：方案 3 数字只作上限，月度决策穿透合并目标 ≤38%，40%–45% 只停加、>45% 修剪；配置仓纳指 1.0 / 标普 0.30 / A 股宽基 0.10 计入（当前无 ETF 持仓）；按市值 · 国防 D 不计 · 与各桶上限叠加取更严；原长期目标权重口径 69.66%（目标权保留，超出部分推迟、非取消）",
+   "note": "方案 3 生效上限：A 户 α ≤27.1% 统一 · 电网冻结约 11% · GEV 0（1.9pp 预留至 10/29 复判）；v1.2：方案 3 数字只作上限，月度决策穿透合并目标 ≤38%，40%–45% 只停加、>45% 修剪；配置仓纳指 1.0 / 标普 0.30 / A 股宽基 0.10 计入（当前无 ETF 持仓）；按市值 · 国防 D 不计 · 与各桶上限叠加取更严；原长期目标权重口径 69.65%（目标权保留，超出部分推迟、非取消）",
    "dist_target": 6.9,
    "status": "green"
   },
   {
    "name": "主题 A · AI / 光模块 / 高β",
-   "current": 32.98,
-   "target": 49.19,
+   "current": 32.96,
+   "target": 49.17,
    "hard": 55,
    "no_add": 52,
    "dir": "max",
    "unit": "%",
    "note": "占统一净值",
-   "dist_target": 5.81,
+   "dist_target": 5.83,
    "status": "green"
   },
   {
    "name": "主题 B · 电网电气",
-   "current": 4.6,
+   "current": 4.54,
    "target": 11.0,
    "hard": 16,
    "no_add": 15,
    "dir": "max",
    "unit": "%",
-   "note": "占统一净值；目标 = 方案 3 生效上限：电网冻结约 11% 统一；原长期目标权重口径 14.89%（目标权保留，超出部分推迟、非取消）",
+   "note": "占统一净值；目标 = 方案 3 生效上限：电网冻结约 11% 统一；原长期目标权重口径 14.90%（目标权保留，超出部分推迟、非取消）",
    "dist_target": 5.0,
    "status": "green"
   },
@@ -686,31 +686,31 @@ window.ALPHAMX_SHARE={
    "no_add": 5.5,
    "dir": "max",
    "unit": "%",
-   "note": "占统一净值；目标 = 方案 3 生效上限：GEV 0（1.9pp 机动额度不计，10/29 复判且须按 v1.2 重跑后才可启用）；原长期目标权重口径 5.58%（目标权保留，超出部分推迟、非取消）",
+   "note": "占统一净值；目标 = 方案 3 生效上限：GEV 0（1.9pp 机动额度不计，10/29 复判且须按 v1.2 重跑后才可启用）；原长期目标权重口径 5.59%（目标权保留，超出部分推迟、非取消）",
    "dist_target": 6.0,
    "status": "green"
   },
   {
    "name": "主题 D · 国防 backlog",
-   "current": 6.21,
-   "target": 11.63,
+   "current": 6.34,
+   "target": 11.64,
    "hard": 14,
    "no_add": 13.5,
    "dir": "max",
    "unit": "%",
    "note": "占统一净值",
-   "dist_target": 2.37,
+   "dist_target": 2.36,
    "status": "green"
   }
  ],
  "returns": {
-  "since_inception_pct": -2.31,
+  "since_inception_pct": -2.28,
   "max_dd_pct": -6.33,
-  "current_dd_pct": -2.54,
+  "current_dd_pct": -2.51,
   "inception": "2026-10-01",
   "ladder_state": "green",
-  "day_change_pct": 2.108,
-  "nav_index": 97.685,
+  "day_change_pct": 0.039,
+  "nav_index": 97.723,
   "ladder": [
    {
     "level_pct": -8,
@@ -1021,12 +1021,20 @@ window.ALPHAMX_SHARE={
     "dd_pct": -2.54,
     "cum_ret_pct": -2.315,
     "day_change_pct": 2.108
+   },
+   {
+    "date": "2026-11-11",
+    "mode": "live",
+    "index": 97.723,
+    "dd_pct": -2.51,
+    "cum_ret_pct": -2.277,
+    "day_change_pct": 0.039
    }
   ]
  },
  "benchmarks": {
   "available": true,
-  "as_of": "2026-11-10",
+  "as_of": "2026-11-11",
   "notes": [],
   "risk_free": {
    "assumption": "0",
@@ -1069,7 +1077,8 @@ window.ALPHAMX_SHARE={
    "2026-11-06",
    "2026-11-07",
    "2026-11-09",
-   "2026-11-10"
+   "2026-11-10",
+   "2026-11-11"
   ],
   "portfolio_index": [
    100.0,
@@ -1107,7 +1116,8 @@ window.ALPHAMX_SHARE={
    93.885,
    94.192,
    95.668,
-   97.685
+   97.685,
+   97.723
   ],
   "benchmarks": [
    {
@@ -1152,6 +1162,7 @@ window.ALPHAMX_SHARE={
      93.0389,
      93.0389,
      93.0809,
+     93.1498,
      93.1498
     ],
     "cum_ret_pct": [
@@ -1190,6 +1201,7 @@ window.ALPHAMX_SHARE={
      -6.961,
      -6.961,
      -6.919,
+     -6.85,
      -6.85
     ],
     "has_derived": false,
@@ -1237,6 +1249,7 @@ window.ALPHAMX_SHARE={
      78.6288,
      78.6288,
      78.4161,
+     79.5591,
      79.5591
     ],
     "cum_ret_pct": [
@@ -1275,6 +1288,7 @@ window.ALPHAMX_SHARE={
      -21.371,
      -21.371,
      -21.584,
+     -20.441,
      -20.441
     ],
     "has_derived": false,
@@ -1322,7 +1336,8 @@ window.ALPHAMX_SHARE={
      96.2226,
      96.2226,
      98.4803,
-     98.4803
+     98.1019,
+     98.1019
     ],
     "cum_ret_pct": [
      0.0,
@@ -1360,7 +1375,8 @@ window.ALPHAMX_SHARE={
      -3.777,
      -3.777,
      -1.52,
-     -1.52
+     -1.898,
+     -1.898
     ],
     "has_derived": false,
     "has_holiday_ffill": false
@@ -1407,7 +1423,8 @@ window.ALPHAMX_SHARE={
      88.4872,
      88.4872,
      91.4957,
-     91.4957
+     90.9488,
+     90.9488
     ],
     "cum_ret_pct": [
      0.0,
@@ -1445,7 +1462,8 @@ window.ALPHAMX_SHARE={
      -11.513,
      -11.513,
      -8.504,
-     -8.504
+     -9.051,
+     -9.051
     ],
     "has_derived": false,
     "has_holiday_ffill": false
@@ -1498,7 +1516,8 @@ window.ALPHAMX_SHARE={
     94.4919,
     94.4919,
     95.5452,
-    95.5826
+    95.4099,
+    95.4099
    ],
    "cum_ret_pct": [
     0.0,
@@ -1536,7 +1555,8 @@ window.ALPHAMX_SHARE={
     -5.508,
     -5.508,
     -4.455,
-    -4.417
+    -4.59,
+    -4.59
    ]
   },
   "comparison": [
@@ -1932,9 +1952,20 @@ window.ALPHAMX_SHARE={
     "US_book": 99.5487,
     "CSI300": 93.1498,
     "CHINEXT": 79.5591,
-    "SPX": 98.4803,
-    "NDX": 91.4957,
-    "BLEND_A_US": 95.5826
+    "SPX": 98.1019,
+    "NDX": 90.9488,
+    "BLEND_A_US": 95.4099
+   },
+   {
+    "date": "2026-11-11",
+    "portfolio": 97.723,
+    "A_book": 96.0385,
+    "US_book": 99.6326,
+    "CSI300": 93.1498,
+    "CHINEXT": 79.5591,
+    "SPX": 98.1019,
+    "NDX": 90.9488,
+    "BLEND_A_US": 95.4099
    }
   ],
   "per_book": [
@@ -1977,6 +2008,7 @@ window.ALPHAMX_SHARE={
      90.4574,
      90.4574,
      93.1483,
+     96.0385,
      96.0385
     ],
     "benchmark_id": "CSI300",
@@ -2017,14 +2049,15 @@ window.ALPHAMX_SHARE={
      93.0389,
      93.0389,
      93.0809,
+     93.1498,
      93.1498
     ],
     "relative": {
      "excess_total_pct": 2.889,
-     "tracking_error_ann_pct": 14.704,
+     "tracking_error_ann_pct": 14.501,
      "up_capture": 1.309,
      "down_capture": 0.916,
-     "n_paired_returns": 35,
+     "n_paired_returns": 36,
      "sample_note": null
     }
    },
@@ -2067,7 +2100,8 @@ window.ALPHAMX_SHARE={
      97.873,
      98.5439,
      98.5439,
-     99.5487
+     99.5487,
+     99.6326
     ],
     "benchmark_id": "SPX",
     "benchmark_label": "标普500",
@@ -2107,14 +2141,15 @@ window.ALPHAMX_SHARE={
      96.2226,
      96.2226,
      98.4803,
-     98.4803
+     98.1019,
+     98.1019
     ],
     "relative": {
-     "excess_total_pct": 1.068,
-     "tracking_error_ann_pct": 15.169,
+     "excess_total_pct": 1.531,
+     "tracking_error_ann_pct": 15.168,
      "up_capture": -0.042,
-     "down_capture": 0.129,
-     "n_paired_returns": 35,
+     "down_capture": 0.041,
+     "n_paired_returns": 36,
      "sample_note": null
     }
    }
@@ -2123,11 +2158,11 @@ window.ALPHAMX_SHARE={
    {
     "benchmark_id": "CSI300",
     "benchmark_label": "沪深300",
-    "excess_total_pct": 4.535,
-    "tracking_error_ann_pct": 13.162,
+    "excess_total_pct": 4.573,
+    "tracking_error_ann_pct": 12.98,
     "up_capture": 0.593,
     "down_capture": 0.484,
-    "n_paired_returns": 35,
+    "n_paired_returns": 36,
     "sample_note": null,
     "excess_index_pts": [
      0.0,
@@ -2165,17 +2200,18 @@ window.ALPHAMX_SHARE={
      0.846,
      1.153,
      2.587,
-     4.535
+     4.535,
+     4.573
     ]
    },
    {
     "benchmark_id": "CHINEXT",
     "benchmark_label": "创业板指",
-    "excess_total_pct": 18.126,
-    "tracking_error_ann_pct": 33.191,
+    "excess_total_pct": 18.164,
+    "tracking_error_ann_pct": 32.754,
     "up_capture": 0.12,
     "down_capture": 0.121,
-    "n_paired_returns": 35,
+    "n_paired_returns": 36,
     "sample_note": null,
     "excess_index_pts": [
      0.0,
@@ -2213,17 +2249,18 @@ window.ALPHAMX_SHARE={
      15.256,
      15.563,
      17.252,
-     18.126
+     18.126,
+     18.164
     ]
    },
    {
     "benchmark_id": "SPX",
     "benchmark_label": "标普500",
-    "excess_total_pct": -0.795,
-    "tracking_error_ann_pct": 14.224,
+    "excess_total_pct": -0.379,
+    "tracking_error_ann_pct": 14.464,
     "up_capture": 0.042,
-    "down_capture": 0.432,
-    "n_paired_returns": 35,
+    "down_capture": 0.244,
+    "n_paired_returns": 36,
     "sample_note": null,
     "excess_index_pts": [
      0.0,
@@ -2261,17 +2298,18 @@ window.ALPHAMX_SHARE={
      -2.338,
      -2.031,
      -2.812,
-     -0.795
+     -0.417,
+     -0.379
     ]
    },
    {
     "benchmark_id": "NDX",
     "benchmark_label": "纳指100",
-    "excess_total_pct": 6.189,
-    "tracking_error_ann_pct": 23.481,
+    "excess_total_pct": 6.774,
+    "tracking_error_ann_pct": 23.555,
     "up_capture": 0.101,
-    "down_capture": 0.266,
-    "n_paired_returns": 35,
+    "down_capture": 0.169,
+    "n_paired_returns": 36,
     "sample_note": null,
     "excess_index_pts": [
      0.0,
@@ -2309,17 +2347,18 @@ window.ALPHAMX_SHARE={
      5.398,
      5.705,
      4.172,
-     6.189
+     6.736,
+     6.774
     ]
    },
    {
     "benchmark_id": "BLEND_A_US",
     "benchmark_label": "混合基准（本金加权）",
-    "excess_total_pct": 2.102,
-    "tracking_error_ann_pct": 9.683,
-    "up_capture": 0.68,
-    "down_capture": 0.633,
-    "n_paired_returns": 35,
+    "excess_total_pct": 2.313,
+    "tracking_error_ann_pct": 9.821,
+    "up_capture": 0.352,
+    "down_capture": 0.433,
+    "n_paired_returns": 36,
     "sample_note": null,
     "excess_index_pts": [
      0.0,
@@ -2357,152 +2396,153 @@ window.ALPHAMX_SHARE={
      -0.607,
      -0.3,
      0.123,
-     2.102
+     2.275,
+     2.313
     ]
    }
   ],
   "metrics": {
    "portfolio": {
     "label": "统一组合",
-    "n_points": 36,
-    "n_returns": 35,
-    "cal_days": 40,
+    "n_points": 37,
+    "n_returns": 36,
+    "cal_days": 41,
     "sample_insufficient": false,
     "sample_note": null,
-    "total_return_pct": -2.315,
-    "ann_return_pct": -15.519,
-    "ann_vol_pct": 11.23,
-    "sharpe": -1.382,
+    "total_return_pct": -2.277,
+    "ann_return_pct": -14.891,
+    "ann_vol_pct": 11.076,
+    "sharpe": -1.344,
     "max_dd_pct": -6.334,
-    "calmar": -2.45,
-    "win_rate_pct": 37.14,
-    "period_vol_pct": 0.707,
+    "calmar": -2.351,
+    "win_rate_pct": 38.89,
+    "period_vol_pct": 0.698,
     "rf_annual_pct": 0.0,
     "rf_note": "无风险利率假设 = 0（样本短时不作中国/美债拆分）"
    },
    "book_A": {
     "label": "A股市场",
-    "n_points": 36,
-    "n_returns": 35,
-    "cal_days": 40,
+    "n_points": 37,
+    "n_returns": 36,
+    "cal_days": 41,
     "sample_insufficient": false,
     "sample_note": null,
     "total_return_pct": -3.961,
-    "ann_return_pct": -25.251,
-    "ann_vol_pct": 16.79,
-    "sharpe": -1.504,
+    "ann_return_pct": -24.644,
+    "ann_vol_pct": 16.558,
+    "sharpe": -1.488,
     "max_dd_pct": -9.549,
-    "calmar": -2.644,
-    "win_rate_pct": 25.71,
-    "period_vol_pct": 1.058,
+    "calmar": -2.581,
+    "win_rate_pct": 25.0,
+    "period_vol_pct": 1.043,
     "rf_annual_pct": 0.0,
     "rf_note": "无风险利率假设 = 0（样本短时不作中国/美债拆分）"
    },
    "book_US": {
     "label": "美股市场",
-    "n_points": 36,
-    "n_returns": 35,
-    "cal_days": 40,
+    "n_points": 37,
+    "n_returns": 36,
+    "cal_days": 41,
     "sample_insufficient": false,
     "sample_note": null,
-    "total_return_pct": -0.451,
-    "ann_return_pct": -3.204,
-    "ann_vol_pct": 10.521,
-    "sharpe": -0.305,
+    "total_return_pct": -0.367,
+    "ann_return_pct": -2.544,
+    "ann_vol_pct": 10.376,
+    "sharpe": -0.245,
     "max_dd_pct": -4.278,
-    "calmar": -0.749,
-    "win_rate_pct": 40.0,
-    "period_vol_pct": 0.663,
+    "calmar": -0.595,
+    "win_rate_pct": 41.67,
+    "period_vol_pct": 0.654,
     "rf_annual_pct": 0.0,
     "rf_note": "无风险利率假设 = 0（样本短时不作中国/美债拆分）"
    },
    "blend": {
     "label": "混合基准（本金加权）",
-    "n_points": 36,
-    "n_returns": 35,
-    "cal_days": 40,
+    "n_points": 37,
+    "n_returns": 36,
+    "cal_days": 41,
     "sample_insufficient": false,
     "sample_note": null,
-    "total_return_pct": -4.417,
-    "ann_return_pct": -27.768,
-    "ann_vol_pct": 11.5,
-    "sharpe": -2.415,
+    "total_return_pct": -4.59,
+    "ann_return_pct": -28.03,
+    "ann_vol_pct": 11.336,
+    "sharpe": -2.473,
     "max_dd_pct": -6.358,
-    "calmar": -4.367,
-    "win_rate_pct": 37.14,
-    "period_vol_pct": 0.724,
+    "calmar": -4.408,
+    "win_rate_pct": 33.33,
+    "period_vol_pct": 0.714,
     "rf_annual_pct": 0.0,
     "rf_note": "无风险利率假设 = 0（样本短时不作中国/美债拆分）"
    },
    "CSI300": {
     "label": "沪深300",
-    "n_points": 36,
-    "n_returns": 35,
-    "cal_days": 40,
+    "n_points": 37,
+    "n_returns": 36,
+    "cal_days": 41,
     "sample_insufficient": false,
     "sample_note": null,
     "total_return_pct": -6.85,
-    "ann_return_pct": -40.006,
-    "ann_vol_pct": 13.377,
-    "sharpe": -2.991,
+    "ann_return_pct": -39.148,
+    "ann_vol_pct": 13.2,
+    "sharpe": -2.966,
     "max_dd_pct": -8.539,
-    "calmar": -4.685,
-    "win_rate_pct": 28.57,
-    "period_vol_pct": 0.843,
+    "calmar": -4.584,
+    "win_rate_pct": 27.78,
+    "period_vol_pct": 0.832,
     "rf_annual_pct": 0.0,
     "rf_note": "无风险利率假设 = 0（样本短时不作中国/美债拆分）"
    },
    "CHINEXT": {
     "label": "创业板指",
-    "n_points": 36,
-    "n_returns": 35,
-    "cal_days": 40,
+    "n_points": 37,
+    "n_returns": 36,
+    "cal_days": 41,
     "sample_insufficient": false,
     "sample_note": null,
     "total_return_pct": -20.441,
-    "ann_return_pct": -80.726,
-    "ann_vol_pct": 37.461,
-    "sharpe": -2.155,
+    "ann_return_pct": -79.824,
+    "ann_vol_pct": 36.973,
+    "sharpe": -2.159,
     "max_dd_pct": -23.718,
-    "calmar": -3.404,
-    "win_rate_pct": 20.0,
-    "period_vol_pct": 2.36,
+    "calmar": -3.366,
+    "win_rate_pct": 19.44,
+    "period_vol_pct": 2.329,
     "rf_annual_pct": 0.0,
     "rf_note": "无风险利率假设 = 0（样本短时不作中国/美债拆分）"
    },
    "SPX": {
     "label": "标普500",
-    "n_points": 36,
-    "n_returns": 35,
-    "cal_days": 40,
+    "n_points": 37,
+    "n_returns": 36,
+    "cal_days": 41,
     "sample_insufficient": false,
     "sample_note": null,
-    "total_return_pct": -1.52,
-    "ann_return_pct": -10.44,
-    "ann_vol_pct": 16.651,
-    "sharpe": -0.627,
+    "total_return_pct": -1.898,
+    "ann_return_pct": -12.554,
+    "ann_vol_pct": 16.443,
+    "sharpe": -0.763,
     "max_dd_pct": -5.95,
-    "calmar": -1.755,
-    "win_rate_pct": 42.86,
-    "period_vol_pct": 1.049,
+    "calmar": -2.11,
+    "win_rate_pct": 41.67,
+    "period_vol_pct": 1.036,
     "rf_annual_pct": 0.0,
     "rf_note": "无风险利率假设 = 0（样本短时不作中国/美债拆分）"
    },
    "NDX": {
     "label": "纳指100",
-    "n_points": 36,
-    "n_returns": 35,
-    "cal_days": 40,
+    "n_points": 37,
+    "n_returns": 36,
+    "cal_days": 41,
     "sample_insufficient": false,
     "sample_note": null,
-    "total_return_pct": -8.504,
-    "ann_return_pct": -47.267,
-    "ann_vol_pct": 26.6,
-    "sharpe": -1.777,
+    "total_return_pct": -9.051,
+    "ann_return_pct": -48.527,
+    "ann_vol_pct": 26.245,
+    "sharpe": -1.849,
     "max_dd_pct": -14.715,
-    "calmar": -3.212,
-    "win_rate_pct": 37.14,
-    "period_vol_pct": 1.676,
+    "calmar": -3.298,
+    "win_rate_pct": 36.11,
+    "period_vol_pct": 1.653,
     "rf_annual_pct": 0.0,
     "rf_note": "无风险利率假设 = 0（样本短时不作中国/美债拆分）"
    }
