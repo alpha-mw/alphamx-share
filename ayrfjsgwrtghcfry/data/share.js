@@ -2607,7 +2607,7 @@ window.ALPHAMX_SHARE={
  },
  "credit_gate": {
   "name": "信用联动 STOP 闸",
-  "state": "数据未就绪",
+  "state": "允许",
   "status_as_of": "2026-11-12",
   "baskets": [
    "A股 AI 篮子",
@@ -2620,14 +2620,14 @@ window.ALPHAMX_SHARE={
     "name": "美国 HY OAS（ICE BofA 高收益债利差，FRED BAMLH0A0HYM2）",
     "status": "正常",
     "current_date": "2026-11-09",
-    "reading_missing": true
+    "reading_missing": false
    },
    {
     "id": "CCC",
     "name": "美国 CCC OAS（ICE BofA CCC 级利差，FRED BAMLH0A3HYC）",
     "status": "正常",
     "current_date": "2026-11-09",
-    "reading_missing": true
+    "reading_missing": false
    },
    {
     "id": "CRWV2031",
