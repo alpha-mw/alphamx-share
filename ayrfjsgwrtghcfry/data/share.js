@@ -657,7 +657,7 @@ window.ALPHAMX_SHARE={
   },
   {
    "name": "AI 基建合并（主题 A + B + C · v1.1 §4.1）· 目标 = 方案 3 满仓 ≈ 38.1%",
-   "current": 10.82,
+   "current": 44.76,
    "target": 38.1,
    "hard": 45,
    "no_add": 40,
