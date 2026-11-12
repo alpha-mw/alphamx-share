@@ -489,7 +489,7 @@ window.ALPHAMX_SHARE={
    "hard_pct": 55,
    "no_add_pct": 52,
    "color": "#f5a524",
-   "current_pct": 35.36,
+   "current_pct": 37.44,
    "target_pct": 50.58,
    "long_term_target_pct": 50.58,
    "target_note": "",
@@ -543,7 +543,7 @@ window.ALPHAMX_SHARE={
    "status": "green"
   }
  ],
- "outside_buckets_current_pct": 54.04,
+ "outside_buckets_current_pct": 51.96,
  "outside_buckets_target_pct": 27.16,
  "limits": [
   {
@@ -656,7 +656,7 @@ window.ALPHAMX_SHARE={
   },
   {
    "name": "主题 A · AI / 光模块 / 高β",
-   "current": 35.36,
+   "current": 37.44,
    "target": 50.58,
    "hard": 55,
    "no_add": 52,
