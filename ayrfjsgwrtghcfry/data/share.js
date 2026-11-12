@@ -21,7 +21,7 @@ window.ALPHAMX_SHARE={
   "target_cash_pct": 18.35,
   "dd_pct": 0.0,
   "nav_index": 101.332,
-  "day_change_pct": 0.447,
+  "day_change_pct": 0.332,
   "vs_capital_pct": 1.281
  },
  "books": [
@@ -709,7 +709,7 @@ window.ALPHAMX_SHARE={
   "current_dd_pct": 0.0,
   "inception": "2026-10-01",
   "ladder_state": "green",
-  "day_change_pct": 0.447,
+  "day_change_pct": 0.332,
   "nav_index": 101.332,
   "ladder": [
    {
@@ -1025,10 +1025,10 @@ window.ALPHAMX_SHARE={
    {
     "date": "2026-11-11",
     "mode": "live",
-    "index": 100.881,
+    "index": 100.997,
     "dd_pct": 0.0,
-    "cum_ret_pct": 0.881,
-    "day_change_pct": 3.272
+    "cum_ret_pct": 0.997,
+    "day_change_pct": 3.39
    },
    {
     "date": "2026-11-12",
@@ -1036,7 +1036,7 @@ window.ALPHAMX_SHARE={
     "index": 101.332,
     "dd_pct": 0.0,
     "cum_ret_pct": 1.332,
-    "day_change_pct": 0.447
+    "day_change_pct": 0.332
    }
   ]
  },
@@ -1126,7 +1126,7 @@ window.ALPHAMX_SHARE={
    94.192,
    95.668,
    97.685,
-   100.881,
+   100.997,
    101.332
   ],
   "benchmarks": [
@@ -1978,9 +1978,9 @@ window.ALPHAMX_SHARE={
    },
    {
     "date": "2026-11-11",
-    "portfolio": 100.881,
-    "A_book": 101.8077,
-    "US_book": 99.6419,
+    "portfolio": 100.997,
+    "A_book": 101.8027,
+    "US_book": 99.8999,
     "CSI300": 93.5307,
     "CHINEXT": 82.0364,
     "SPX": 99.386,
@@ -2040,7 +2040,7 @@ window.ALPHAMX_SHARE={
      90.4574,
      93.1483,
      96.0385,
-     101.8077,
+     101.8027,
      102.4411
     ],
     "benchmark_id": "CSI300",
@@ -2087,8 +2087,8 @@ window.ALPHAMX_SHARE={
     ],
     "relative": {
      "excess_total_pct": 9.64,
-     "tracking_error_ann_pct": 20.357,
-     "up_capture": 2.109,
+     "tracking_error_ann_pct": 20.35,
+     "up_capture": 2.108,
      "down_capture": 0.821,
      "n_paired_returns": 37,
      "sample_note": null
@@ -2134,7 +2134,7 @@ window.ALPHAMX_SHARE={
      98.5439,
      98.5439,
      99.5487,
-     99.6419,
+     99.8999,
      99.8999
     ],
     "benchmark_id": "SPX",
@@ -2181,8 +2181,8 @@ window.ALPHAMX_SHARE={
     ],
     "relative": {
      "excess_total_pct": 0.514,
-     "tracking_error_ann_pct": 15.319,
-     "up_capture": -0.029,
+     "tracking_error_ann_pct": 15.178,
+     "up_capture": -0.007,
      "down_capture": 0.041,
      "n_paired_returns": 37,
      "sample_note": null
@@ -2194,9 +2194,9 @@ window.ALPHAMX_SHARE={
     "benchmark_id": "CSI300",
     "benchmark_label": "沪深300",
     "excess_total_pct": 8.531,
-    "tracking_error_ann_pct": 14.832,
-    "up_capture": 1.036,
-    "down_capture": 0.426,
+    "tracking_error_ann_pct": 14.929,
+    "up_capture": 1.053,
+    "down_capture": 0.434,
     "n_paired_returns": 37,
     "sample_note": null,
     "excess_index_pts": [
@@ -2236,7 +2236,7 @@ window.ALPHAMX_SHARE={
      1.153,
      2.587,
      4.535,
-     7.35,
+     7.466,
      8.531
     ]
    },
@@ -2244,9 +2244,9 @@ window.ALPHAMX_SHARE={
     "benchmark_id": "CHINEXT",
     "benchmark_label": "创业板指",
     "excess_total_pct": 21.293,
-    "tracking_error_ann_pct": 32.852,
-    "up_capture": 0.254,
-    "down_capture": 0.104,
+    "tracking_error_ann_pct": 32.789,
+    "up_capture": 0.26,
+    "down_capture": 0.106,
     "n_paired_returns": 37,
     "sample_note": null,
     "excess_index_pts": [
@@ -2286,7 +2286,7 @@ window.ALPHAMX_SHARE={
      15.563,
      17.252,
      18.126,
-     18.845,
+     18.961,
      21.293
     ]
    },
@@ -2294,8 +2294,8 @@ window.ALPHAMX_SHARE={
     "benchmark_id": "SPX",
     "benchmark_label": "标普500",
     "excess_total_pct": 1.946,
-    "tracking_error_ann_pct": 15.184,
-    "up_capture": 0.318,
+    "tracking_error_ann_pct": 15.271,
+    "up_capture": 0.329,
     "down_capture": 0.244,
     "n_paired_returns": 37,
     "sample_note": null,
@@ -2336,7 +2336,7 @@ window.ALPHAMX_SHARE={
      -2.031,
      -2.812,
      -0.417,
-     1.495,
+     1.611,
      1.946
     ]
    },
@@ -2344,8 +2344,8 @@ window.ALPHAMX_SHARE={
     "benchmark_id": "NDX",
     "benchmark_label": "纳指100",
     "excess_total_pct": 8.306,
-    "tracking_error_ann_pct": 23.329,
-    "up_capture": 0.283,
+    "tracking_error_ann_pct": 23.352,
+    "up_capture": 0.29,
     "down_capture": 0.169,
     "n_paired_returns": 37,
     "sample_note": null,
@@ -2386,7 +2386,7 @@ window.ALPHAMX_SHARE={
      5.705,
      4.172,
      6.736,
-     7.855,
+     7.971,
      8.306
     ]
    },
@@ -2394,9 +2394,9 @@ window.ALPHAMX_SHARE={
     "benchmark_id": "BLEND_A_US",
     "benchmark_label": "混合基准（本金加权）",
     "excess_total_pct": 5.525,
-    "tracking_error_ann_pct": 11.603,
-    "up_capture": 0.767,
-    "down_capture": 0.378,
+    "tracking_error_ann_pct": 11.722,
+    "up_capture": 0.783,
+    "down_capture": 0.388,
     "n_paired_returns": 37,
     "sample_note": null,
     "excess_index_pts": [
@@ -2436,7 +2436,7 @@ window.ALPHAMX_SHARE={
      -0.3,
      0.123,
      2.275,
-     4.678,
+     4.794,
      5.525
     ]
    }
@@ -2451,12 +2451,12 @@ window.ALPHAMX_SHARE={
     "sample_note": null,
     "total_return_pct": 1.332,
     "ann_return_pct": 9.431,
-    "ann_vol_pct": 13.934,
-    "sharpe": 0.677,
+    "ann_vol_pct": 14.104,
+    "sharpe": 0.669,
     "max_dd_pct": -6.334,
     "calmar": 1.489,
     "win_rate_pct": 40.54,
-    "period_vol_pct": 0.878,
+    "period_vol_pct": 0.888,
     "rf_annual_pct": 0.0,
     "rf_note": "无风险利率假设 = 0（样本短时不作中国/美债拆分）"
    },
@@ -2469,12 +2469,12 @@ window.ALPHAMX_SHARE={
     "sample_note": null,
     "total_return_pct": 2.441,
     "ann_return_pct": 17.852,
-    "ann_vol_pct": 22.727,
+    "ann_vol_pct": 22.719,
     "sharpe": 0.786,
     "max_dd_pct": -9.549,
     "calmar": 1.869,
     "win_rate_pct": 29.73,
-    "period_vol_pct": 1.432,
+    "period_vol_pct": 1.431,
     "rf_annual_pct": 0.0,
     "rf_note": "无风险利率假设 = 0（样本短时不作中国/美债拆分）"
    },
@@ -2487,12 +2487,12 @@ window.ALPHAMX_SHARE={
     "sample_note": null,
     "total_return_pct": -0.1,
     "ann_return_pct": -0.68,
-    "ann_vol_pct": 10.259,
+    "ann_vol_pct": 10.275,
     "sharpe": -0.066,
     "max_dd_pct": -4.278,
     "calmar": -0.159,
-    "win_rate_pct": 43.24,
-    "period_vol_pct": 0.646,
+    "win_rate_pct": 40.54,
+    "period_vol_pct": 0.647,
     "rf_annual_pct": 0.0,
     "rf_note": "无风险利率假设 = 0（样本短时不作中国/美债拆分）"
    },
