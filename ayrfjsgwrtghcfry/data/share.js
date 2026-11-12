@@ -11,12 +11,12 @@ window.ALPHAMX_SHARE={
  "performance": {
   "kind": "mtm_close",
   "label": "两户正式持仓 · A股按 11/12 收盘 · 美股按 11/11 美东收盘价计",
-  "methodology": "两户均为正式持仓口径。A股市场持仓以 PM 台账为准，按 11/12 收盘价计（11/10 港股通 02513 买入已按未交收明细回冲入账；300502 新易盛 余仓 11/3 清仓已入账；GC001 10/28–10/30、11/2–11/3 未回报、按未做暂记，现金留活期；费用按台账单列）。美股市场持仓以 PM 台账（11/11 美东收盘定账 + LMT 减半成交入账；SGOV 现金等价按市价法、分红按扣 10% 税后入账）为准，个股与配置仓 ETF 按 11/11 美东收盘价计，SGOV 现金等价账面值随台账（按 11/11 美东收盘定账）。GEV GE Vernova 未建；未成交挂单不计。汇率：人民币中间价 2026-11-12（当日口径）；历史点保留当日所用汇率。⚑ 10/6 汇率口径切换属计量口径变化、非投资收益；回撤高点按 10/6 起序列计。现金口径（v1.2）：每户现金 = 活期 + 现金等价，净值只计一次。"
+  "methodology": "两户均为正式持仓口径。A股市场持仓以 PM 台账为准，按 11/12 收盘价计（11/10 港股通 02513 买入已按未交收明细回冲入账；300502 新易盛 余仓 11/3 清仓已入账；GC001 10/28–10/30、11/2–11/3 未回报、按未做暂记，现金留活期；费用按台账单列）。美股市场持仓以 PM 台账（11/11 美东收盘定账 + LMT 减半成交入账；SGOV 现金等价按市价法、分红按扣 10% 税后入账）为准，个股与配置仓 ETF 按 11/11 美东收盘价计，NVDA 按成本暂估待收盘定账，SGOV 现金等价账面值随台账（按 11/11 美东收盘定账）。GEV GE Vernova 未建；未成交挂单不计。汇率：人民币中间价 2026-11-12（当日口径）；历史点保留当日所用汇率。⚑ 10/6 汇率口径切换属计量口径变化、非投资收益；回撤高点按 10/6 起序列计。现金口径（v1.2）：每户现金 = 活期 + 现金等价，净值只计一次。"
  },
  "fx_constraint": "外汇约束：A股市场资金无法快速划转至美股市场；两户现金各自独立、不可互相抵充。大账仅作合并计量与主题穿透，不假设跨境移资。",
  "unified": {
-  "equity_pct": 48.62,
-  "cash_pct": 51.38,
+  "equity_pct": 51.49,
+  "cash_pct": 48.51,
   "target_equity_pct": 81.65,
   "target_cash_pct": 18.35,
   "dd_pct": 0.0,
@@ -246,8 +246,8 @@ window.ALPHAMX_SHARE={
    "market": "美股",
    "mode": "live",
    "share_of_unified_pct": 45.02,
-   "cash_pct": 69.88,
-   "equity_pct": 30.12,
+   "cash_pct": 63.5,
+   "equity_pct": 36.5,
    "cash_floor_pct": 2,
    "target_equity_pct": 69,
    "target_cash_pct": 31.0,
@@ -365,15 +365,21 @@ window.ALPHAMX_SHARE={
      "name": "SPDR 标普500ETF（SPYM）",
      "w_book": 1.5,
      "w_unified": 0.68
+    },
+    {
+     "code": "NVDA",
+     "name": "NVIDIA 英伟达",
+     "w_book": 6.38,
+     "w_unified": 2.87
     }
    ],
    "groups": [
     {
      "id": "stock",
      "label": "个股",
-     "w_book": 23.55,
-     "w_unified": 10.6,
-     "upl_pct": 1.602,
+     "w_book": 29.93,
+     "w_unified": 13.47,
+     "upl_pct": 1.256,
      "rows": [
       {
        "code": "ETN",
@@ -409,6 +415,13 @@ window.ALPHAMX_SHARE={
        "w_book": 3.14,
        "w_unified": 1.42,
        "upl_pct": 10.332
+      },
+      {
+       "code": "NVDA",
+       "name": "NVIDIA 英伟达",
+       "w_book": 6.38,
+       "w_unified": 2.87,
+       "upl_pct": 0.0
       }
      ]
     },
@@ -469,15 +482,15 @@ window.ALPHAMX_SHARE={
     {
      "id": "demand_cash",
      "label": "活期现金",
-     "w_book": 38.4,
-     "w_unified": 17.29,
+     "w_book": 32.03,
+     "w_unified": 14.42,
      "upl_pct": null,
      "rows": []
     }
    ],
    "pnl": {
-    "unrealized_pct": 0.952,
-    "total_pct_of_cost": -0.337
+    "unrealized_pct": 0.784,
+    "total_pct_of_cost": -0.277
    }
   }
  ],
@@ -489,7 +502,7 @@ window.ALPHAMX_SHARE={
    "hard_pct": 55,
    "no_add_pct": 52,
    "color": "#f5a524",
-   "current_pct": 37.44,
+   "current_pct": 40.31,
    "target_pct": 50.58,
    "long_term_target_pct": 50.58,
    "target_note": "",
@@ -543,12 +556,12 @@ window.ALPHAMX_SHARE={
    "status": "green"
   }
  ],
- "outside_buckets_current_pct": 51.96,
+ "outside_buckets_current_pct": 49.09,
  "outside_buckets_target_pct": 27.16,
  "limits": [
   {
    "name": "统一权益（穿透）",
-   "current": 48.62,
+   "current": 51.49,
    "target": 81.65,
    "hard": 88,
    "no_add": 86,
@@ -572,7 +585,7 @@ window.ALPHAMX_SHARE={
   },
   {
    "name": "美股市场 现金 + 现金等价（分户）",
-   "current": 69.88,
+   "current": 63.5,
    "target": 31.0,
    "hard": 2,
    "no_add": null,
@@ -656,7 +669,7 @@ window.ALPHAMX_SHARE={
   },
   {
    "name": "主题 A · AI / 光模块 / 高β",
-   "current": 37.44,
+   "current": 40.31,
    "target": 50.58,
    "hard": 55,
    "no_add": 52,
