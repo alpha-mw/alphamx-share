@@ -10,8 +10,8 @@ window.ALPHAMX_SHARE={
  "mode_label": "实盘",
  "performance": {
   "kind": "mtm_close",
-  "label": "两户正式持仓 · A股按 11/13 收盘 · 美股按 11/12 美东收盘价计",
-  "methodology": "两户均为正式持仓口径。A股市场持仓以 PM 台账为准，按 11/13 收盘价计（11/10 港股通 02513 买入已按未交收明细回冲入账；300502 新易盛 余仓 11/3 清仓已入账；GC001 10/28–10/30、11/2–11/3 未回报、按未做暂记，现金留活期；费用按台账单列）。美股市场持仓以 PM 台账（11/12 美东收盘定账 + LMT 减半成交入账；SGOV 现金等价按市价法、分红按扣 10% 税后入账）为准，个股与配置仓 ETF 按 11/12 美东收盘价计，NVDA 按成本暂估待收盘定账，SGOV 现金等价账面值随台账（按 11/12 美东收盘定账）。GEV GE Vernova 未建；未成交挂单不计。汇率：人民币中间价 2026-11-13（当日口径）；历史点保留当日所用汇率。⚑ 10/6 汇率口径切换属计量口径变化、非投资收益；回撤高点按 10/6 起序列计。现金口径（v1.2）：每户现金 = 活期 + 现金等价，净值只计一次。"
+  "label": "两户正式持仓 · A股按 11/13 收盘（11/13 为参考暂定值 待定账覆盖） · 美股按 11/12 美东收盘价计",
+  "methodology": "两户均为正式持仓口径。A股市场持仓以 PM 台账为准，按 11/13 收盘价计（11/13 为参考暂定值 待定账覆盖）（11/10 港股通 02513 买入已按未交收明细回冲入账；300502 新易盛 余仓 11/3 清仓已入账；GC001 10/28–10/30、11/2–11/3 未回报、按未做暂记，现金留活期；费用按台账单列）。美股市场持仓以 PM 台账（11/12 美东收盘定账 + LMT 减半成交入账；SGOV 现金等价按市价法、分红按扣 10% 税后入账）为准，个股与配置仓 ETF 按 11/12 美东收盘价计，NVDA 已按收盘价计，SGOV 现金等价账面值随台账（按 11/12 美东收盘定账）。GEV GE Vernova 未建；未成交挂单不计。汇率：人民币中间价 2026-11-13（当日口径）；历史点保留当日所用汇率。⚑ 10/6 汇率口径切换属计量口径变化、非投资收益；回撤高点按 10/6 起序列计。现金口径（v1.2）：每户现金 = 活期 + 现金等价，净值只计一次。"
  },
  "fx_constraint": "外汇约束：A股市场资金无法快速划转至美股市场；两户现金各自独立、不可互相抵充。大账仅作合并计量与主题穿透，不假设跨境移资。",
  "unified": {
@@ -20,9 +20,9 @@ window.ALPHAMX_SHARE={
   "target_equity_pct": 81.25,
   "target_cash_pct": 18.75,
   "dd_pct": -3.63,
-  "nav_index": 97.654,
-  "day_change_pct": -3.63,
-  "vs_capital_pct": -2.38
+  "nav_index": 97.655,
+  "day_change_pct": -3.628,
+  "vs_capital_pct": -2.379
  },
  "books": [
   {
@@ -252,7 +252,7 @@ window.ALPHAMX_SHARE={
    "target_equity_pct": 69,
    "target_cash_pct": 31.0,
    "cash_equivalents_pct": 31.46,
-   "vs_capital_pct": -0.043,
+   "vs_capital_pct": -0.04,
    "targets": [
     {
      "code": "ETN",
@@ -467,14 +467,14 @@ window.ALPHAMX_SHARE={
      "label": "现金等价",
      "w_book": 31.46,
      "w_unified": 14.7,
-     "upl_pct": 0.05,
+     "upl_pct": 0.06,
      "rows": [
       {
        "code": "SGOV",
        "name": "iShares 0-3 Month Treasury Bond ETF",
        "w_book": 31.46,
        "w_unified": 14.7,
-       "upl_pct": 0.05,
+       "upl_pct": 0.06,
        "pnl_basis": "盯市"
       }
      ]
@@ -490,7 +490,7 @@ window.ALPHAMX_SHARE={
    ],
    "pnl": {
     "unrealized_pct": 0.941,
-    "total_pct_of_cost": -0.12
+    "total_pct_of_cost": -0.112
    }
   }
  ],
@@ -717,13 +717,13 @@ window.ALPHAMX_SHARE={
   }
  ],
  "returns": {
-  "since_inception_pct": -2.35,
+  "since_inception_pct": -2.34,
   "max_dd_pct": -6.33,
   "current_dd_pct": -3.63,
   "inception": "2026-10-01",
   "ladder_state": "green",
-  "day_change_pct": -3.63,
-  "nav_index": 97.654,
+  "day_change_pct": -3.628,
+  "nav_index": 97.655,
   "ladder": [
    {
     "level_pct": -8,
@@ -1054,10 +1054,10 @@ window.ALPHAMX_SHARE={
    {
     "date": "2026-11-13",
     "mode": "live",
-    "index": 97.654,
+    "index": 97.655,
     "dd_pct": -3.63,
-    "cum_ret_pct": -2.346,
-    "day_change_pct": -3.63
+    "cum_ret_pct": -2.345,
+    "day_change_pct": -3.628
    }
   ]
  },
@@ -1150,7 +1150,7 @@ window.ALPHAMX_SHARE={
    97.685,
    100.997,
    101.332,
-   97.654
+   97.655
   ],
   "benchmarks": [
    {
@@ -2033,9 +2033,9 @@ window.ALPHAMX_SHARE={
    },
    {
     "date": "2026-11-13",
-    "portfolio": 97.654,
+    "portfolio": 97.655,
     "A_book": 95.6577,
-    "US_book": 99.9568,
+    "US_book": 99.9599,
     "CSI300": 92.1671,
     "CHINEXT": 77.3802,
     "SPX": 99.0341,
@@ -2182,7 +2182,7 @@ window.ALPHAMX_SHARE={
      99.5487,
      99.8999,
      99.8999,
-     99.9568
+     99.9599
     ],
     "benchmark_id": "SPX",
     "benchmark_label": "标普500",
@@ -2228,7 +2228,7 @@ window.ALPHAMX_SHARE={
      99.0341
     ],
     "relative": {
-     "excess_total_pct": 0.923,
+     "excess_total_pct": 0.926,
      "tracking_error_ann_pct": 15.003,
      "up_capture": -0.007,
      "down_capture": 0.039,
@@ -2241,8 +2241,8 @@ window.ALPHAMX_SHARE={
    {
     "benchmark_id": "CSI300",
     "benchmark_label": "沪深300",
-    "excess_total_pct": 5.487,
-    "tracking_error_ann_pct": 16.807,
+    "excess_total_pct": 5.488,
+    "tracking_error_ann_pct": 16.806,
     "up_capture": 1.053,
     "down_capture": 0.658,
     "n_paired_returns": 38,
@@ -2286,13 +2286,13 @@ window.ALPHAMX_SHARE={
      4.535,
      7.466,
      8.531,
-     5.487
+     5.488
     ]
    },
    {
     "benchmark_id": "CHINEXT",
     "benchmark_label": "创业板指",
-    "excess_total_pct": 20.274,
+    "excess_total_pct": 20.275,
     "tracking_error_ann_pct": 32.439,
     "up_capture": 0.26,
     "down_capture": 0.178,
@@ -2337,14 +2337,14 @@ window.ALPHAMX_SHARE={
      18.126,
      18.961,
      21.293,
-     20.274
+     20.275
     ]
    },
    {
     "benchmark_id": "SPX",
     "benchmark_label": "标普500",
-    "excess_total_pct": -1.38,
-    "tracking_error_ann_pct": 17.808,
+    "excess_total_pct": -1.379,
+    "tracking_error_ann_pct": 17.807,
     "up_capture": 0.329,
     "down_capture": 0.21,
     "n_paired_returns": 38,
@@ -2388,14 +2388,14 @@ window.ALPHAMX_SHARE={
      -0.417,
      1.611,
      2.298,
-     -1.38
+     -1.379
     ]
    },
    {
     "benchmark_id": "NDX",
     "benchmark_label": "纳指100",
-    "excess_total_pct": 4.907,
-    "tracking_error_ann_pct": 25.062,
+    "excess_total_pct": 4.908,
+    "tracking_error_ann_pct": 25.061,
     "up_capture": 0.29,
     "down_capture": 0.153,
     "n_paired_returns": 38,
@@ -2439,14 +2439,14 @@ window.ALPHAMX_SHARE={
      6.736,
      7.971,
      8.585,
-     4.907
+     4.908
     ]
    },
    {
     "benchmark_id": "BLEND_A_US",
     "benchmark_label": "混合基准（本金加权）",
-    "excess_total_pct": 2.353,
-    "tracking_error_ann_pct": 14.529,
+    "excess_total_pct": 2.354,
+    "tracking_error_ann_pct": 14.528,
     "up_capture": 0.784,
     "down_capture": 0.676,
     "n_paired_returns": 38,
@@ -2490,7 +2490,7 @@ window.ALPHAMX_SHARE={
      2.275,
      4.794,
      5.686,
-     2.353
+     2.354
     ]
    }
   ],
@@ -2502,12 +2502,12 @@ window.ALPHAMX_SHARE={
     "cal_days": 43,
     "sample_insufficient": false,
     "sample_note": null,
-    "total_return_pct": -2.346,
-    "ann_return_pct": -14.566,
-    "ann_vol_pct": 16.752,
-    "sharpe": -0.87,
+    "total_return_pct": -2.345,
+    "ann_return_pct": -14.561,
+    "ann_vol_pct": 16.751,
+    "sharpe": -0.869,
     "max_dd_pct": -6.334,
-    "calmar": -2.3,
+    "calmar": -2.299,
     "win_rate_pct": 39.47,
     "period_vol_pct": 1.055,
     "rf_annual_pct": 0.0,
@@ -2538,12 +2538,12 @@ window.ALPHAMX_SHARE={
     "cal_days": 43,
     "sample_insufficient": false,
     "sample_note": null,
-    "total_return_pct": -0.043,
-    "ann_return_pct": -0.286,
+    "total_return_pct": -0.04,
+    "ann_return_pct": -0.266,
     "ann_vol_pct": 10.14,
-    "sharpe": -0.028,
+    "sharpe": -0.026,
     "max_dd_pct": -4.278,
-    "calmar": -0.067,
+    "calmar": -0.062,
     "win_rate_pct": 42.11,
     "period_vol_pct": 0.639,
     "rf_annual_pct": 0.0,
